@@ -2,7 +2,7 @@ import { Button } from "@/components/ui/button";
 import { Github, Linkedin, Mail, ArrowDown } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 import GalaxyBackground from "./GalaxyBackground";
-import resume from "@/assets/Anagha-resume.pdf";
+import resume from "@/assets/Anagha_O.pdf";
 const Hero = () => {
   return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background */}
@@ -20,8 +20,10 @@ const Hero = () => {
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
             Hi, I'm <span className="gradient-text">Anagha O</span>
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fade-in-up-delay-1">Full Stack Developer </p>
-          <p className="text-lg text-muted-foreground/80 mb-12 max-w-2xl mx-auto animate-fade-in-up-delay-2">Passionate about building responsive, user-friendly websites and continuously exploring new technologies. </p>
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fade-in-up-delay-1">Software Engineer</p>
+          <p className="text-lg text-muted-foreground/80 mb-12 max-w-2xl mx-auto animate-fade-in-up-delay-2">
+            Full Stack Developer with experience building scalable web applications and enterprise software solutions. Passionate about creating efficient, maintainable, and user-centric software.
+          </p>
         </div>
         
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center mb-16 animate-fade-in-up-delay-3">

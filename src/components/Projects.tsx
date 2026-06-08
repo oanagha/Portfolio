@@ -9,6 +9,30 @@ const Projects = () => {
   
   const projects = [
     {
+      title: "Skyline Storage",
+      description: "Micro frontend self-storage management platform with separate customer-facing and admin frontend modules. Contributed to interfaces where users browse unit sizes, pricing, and availability. Built responsive floor plan and unit listing modules with dynamic backend integration, reusable React components, and admin dashboards for storage units, customer accounts, reservations, and facility operations.",
+      tech: ["Micro Frontends", "React.js", "TypeScript", "Node.js", "Tailwind CSS", "Strapi"],
+      image: "/placeholder.svg",
+      liveUrl: "#",
+      githubUrl: "#"
+    },
+    {
+      title: "MAOS",
+      description: "Developed the frontend for a SaaS platform designed for marketing agencies to centralize client, project, and team management. Built responsive UI components, interactive dashboards for clients, project role permissions, and user profiles. Collaborated with the backend team on Firestore data structures for clients, projects, and tasks.",
+      tech: ["React.js", "Tailwind CSS", "Firebase", "Firestore"],
+      image: "/placeholder.svg",
+      liveUrl: "#",
+      githubUrl: "#"
+    },
+    {
+      title: "IP-Energy",
+      description: "Developed a web-based assessment platform for SMEs to plan and evaluate energy projects. Implemented dynamic questionnaires with text inputs, ratings, checkboxes, and conditional forms. Translated Factfinding, Feasibility, and SDG alignment concepts into an intuitive digital workflow with structured data visualization for project evaluation and reporting.",
+      tech: ["React.js", "TypeScript", "Tailwind CSS", "REST APIs"],
+      image: "/placeholder.svg",
+      liveUrl: "#",
+      githubUrl: "#"
+    },
+    {
       title: "Library Management App",
       description: "Full-stack library management application using MongoDB, Express, and Node.js. Features include browse, add, update, and delete books with a responsive frontend interface.",
       tech: ["MongoDB", "Express.js", "Node.js", "HTML", "CSS"],
@@ -52,7 +76,7 @@ const Projects = () => {
             Featured <span className="gradient-text">Projects</span>
           </h2>
           <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            A selection of projects that showcase my skills and experience
+            Professional and personal projects that showcase my skills and experience
           </p>
         </div>
         

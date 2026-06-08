@@ -8,11 +8,11 @@ import { useEffect } from "react";
 const Index = () => {
   useEffect(() => {
     // Update document title and meta description for SEO
-    document.title = "Anagha O - Full Stack Developer Trainee | MERN Stack Developer";
+    document.title = "Anagha O - Frontend Developer | Software Engineer";
     
     const metaDescription = document.querySelector('meta[name="description"]');
     if (metaDescription) {
-      metaDescription.setAttribute('content', 'Full Stack Developer Trainee at GEESESQUADS specializing in MERN Stack development. Computer Science graduate from Calicut University with hands-on experience from LUMINAR TECHNOLAB internship.');
+      metaDescription.setAttribute('content', 'Full Stack Developer with experience building scalable web applications using React.js, TypeScript, Go, Node.js, Firebase, and SQL databases. Junior Software Engineer at GEESESQUADS.');
     }
 
     // Add structured data for better SEO
@@ -20,12 +20,12 @@ const Index = () => {
       "@context": "https://schema.org",
       "@type": "Person",
       "name": "Anagha O",
-      "jobTitle": "Full Stack Developer Trainee",
-      "description": "Full Stack Developer Trainee at GEESESQUADS",
+      "jobTitle": "Junior Software Engineer",
+      "description": "Frontend Developer and Software Engineer specializing in React.js, TypeScript, Go, and Node.js",
       "url": window.location.origin,
       "sameAs": [
-        "https://github.com/anagha-o",
-        "https://linkedin.com/in/anagha-o"
+        "https://github.com/oanagha",
+        "https://linkedin.com/in/anaghao8"
       ]
     };
 

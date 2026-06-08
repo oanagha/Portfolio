@@ -20,9 +20,9 @@ const Skills = () => {
   const allSkills = skillCategories.flatMap(category => category.skills);
 
   return (
-    <section className="py-20 px-6 gradient-secondary relative">
+    <section className="py-20 px-6 gradient-secondary relative bg-background">
       <GalaxyBackground />
-      <div className="max-w-6xl mx-auto">
+      <div className="relative z-10 max-w-6xl mx-auto">
         <div className="text-center mb-16">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             Skills & <span className="gradient-text">Technologies</span>

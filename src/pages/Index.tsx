@@ -1,4 +1,6 @@
 import Hero from "@/components/Hero";
+import HeroScrollMorph from "@/components/HeroScrollMorph";
+import { HeroScrollProvider } from "@/context/HeroScrollContext";
 import About from "@/components/About";
 import Skills from "@/components/Skills";
 import Projects from "@/components/Projects";
@@ -44,13 +46,16 @@ const Index = () => {
   }, []);
 
   return (
-    <main className="min-h-screen">
-      <Hero />
-      <About />
-      <Skills />
-      <Projects />
-      <Contact />
-    </main>
+    <HeroScrollProvider>
+      <main className="min-h-screen">
+        <HeroScrollMorph />
+        <Hero />
+        <About />
+        <Skills />
+        <Projects />
+        <Contact />
+      </main>
+    </HeroScrollProvider>
   );
 };
 

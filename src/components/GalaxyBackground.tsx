@@ -250,14 +250,19 @@ export default function GalaxyBackground() {
   return (
     <Canvas
       camera={{ position: [0, 0, 10], fov: 75 }}
-      style={{ 
-        position: 'absolute', 
-        top: 0, 
-        left: 0, 
-        width: '100%', 
-        height: '100%', 
+      gl={{ alpha: true, antialias: true }}
+      onCreated={({ gl }) => {
+        gl.setClearColor(0x000000, 0);
+      }}
+      style={{
+        position: "absolute",
+        top: 0,
+        left: 0,
+        width: "100%",
+        height: "100%",
         zIndex: 1,
-        pointerEvents: 'none'
+        pointerEvents: "none",
+        background: "transparent",
       }}
     >
       <ambientLight intensity={0.1} />

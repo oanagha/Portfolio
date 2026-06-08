@@ -3,13 +3,17 @@ import { Github, Linkedin, Mail, ArrowDown } from "lucide-react";
 import heroBackground from "@/assets/hero-background.jpg";
 import GalaxyBackground from "./GalaxyBackground";
 import resume from "@/assets/Anagha_O.pdf";
+import { useHeroScroll } from "@/context/HeroScrollContext";
+
 const Hero = () => {
-  return <section className="relative min-h-screen flex items-center justify-center overflow-hidden">
+  const { progress } = useHeroScroll();
+  const isMorphing = progress > 0.02;
+  return <section id="hero" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-background">
       {/* Background */}
-      <div className="absolute inset-0 bg-cover bg-center bg-no-repeat" style={{
+      <div className="absolute inset-0 z-0 bg-cover bg-center bg-no-repeat" style={{
       backgroundImage: `url(${heroBackground})`
     }} />
-      <div className="absolute inset-0 gradient-secondary opacity-90" />
+      <div className="absolute inset-0 z-0 gradient-secondary opacity-90" />
       
       {/* 3D Floating Objects */}
       <GalaxyBackground />
@@ -18,9 +22,29 @@ const Hero = () => {
       <div className="relative z-10 max-w-4xl mx-auto px-6 text-center">
         <div className="animate-fade-in-up">
           <h1 className="text-5xl md:text-7xl font-bold mb-6">
-            Hi, I'm <span className="gradient-text">Anagha O</span>
+            <span
+              className="transition-opacity duration-200"
+              style={{ opacity: isMorphing ? Math.max(0, 1 - progress * 3) : 1 }}
+            >
+              Hi, I'm{" "}
+            </span>
+            <span
+              id="hero-name"
+              className="gradient-text"
+              style={{ visibility: isMorphing ? "hidden" : "visible" }}
+            >
+              Anagha O
+            </span>
           </h1>
-          <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fade-in-up-delay-1">Software Engineer</p>
+          <p className="text-xl md:text-2xl text-muted-foreground mb-8 animate-fade-in-up-delay-1">
+            <span
+              id="hero-title"
+              className="inline-block"
+              style={{ visibility: isMorphing ? "hidden" : "visible" }}
+            >
+              SOFTWARE ENGINEER
+            </span>
+          </p>
           <p className="text-lg text-muted-foreground/80 mb-12 max-w-2xl mx-auto animate-fade-in-up-delay-2">
             Full Stack Developer with experience building scalable web applications and enterprise software solutions. Passionate about creating efficient, maintainable, and user-centric software.
           </p>
@@ -48,7 +72,7 @@ const Hero = () => {
           </Button>
         </div>
         
-        <div className="flex justify-center gap-6 animate-fade-in-up-delay-3">
+        <div id="hero-social-trigger" className="flex justify-center gap-6 animate-fade-in-up-delay-3">
           <Button 
             variant="ghost" 
             size="icon" 

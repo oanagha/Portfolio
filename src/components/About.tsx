@@ -10,13 +10,16 @@ const About = () => {
           </p>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div className="space-y-6">
             <p className="text-lg leading-relaxed">
-              Full Stack Developer with experience building scalable web applications and enterprise software solutions using React.js, TypeScript, Go, Node.js, Firebase, and SQL databases. Experienced in developing customer-facing platforms, SaaS applications, admin dashboards, and data-driven systems.
+              I am a Full Stack Developer passionate about building scalable web applications and meaningful digital experiences. With professional experience in developing customer-facing platforms, SaaS products, administrative dashboards, and data-driven systems, I enjoy transforming complex requirements into intuitive and reliable solutions.
             </p>
             <p className="text-lg leading-relaxed text-muted-foreground">
-              Skilled in designing responsive user interfaces, integrating REST APIs, and collaborating across cross-functional teams to deliver production-ready solutions. Currently working as a Junior Software Engineer at GEESESQUADS, following a ME(A)RN Stack Developer internship at LUMINAR TECHNOLAB. I hold a Bachelor's degree in Computer Science from the University of Calicut.
+              Currently working as a Junior Software Engineer at Geesesquads, I collaborate with cross-functional teams to develop production-ready applications that prioritize performance, usability, and maintainability. My journey began with a ME(A)RN Stack Development internship at Luminar Technolab, where I built a strong foundation in modern web development.
+            </p>
+            <p className="text-lg leading-relaxed text-muted-foreground">
+              As a Computer Science graduate from the University of Calicut, I am committed to continuous learning, solving real-world problems, and creating technology that delivers value to both businesses and users.
             </p>
             <div className="flex flex-wrap gap-3 pt-4">
               <span className="px-4 py-2 gradient-secondary rounded-full text-sm font-medium">User-Centric Design</span>
@@ -24,12 +27,12 @@ const About = () => {
                 REST API Integration
               </span>
               <span className="px-4 py-2 gradient-secondary rounded-full text-sm font-medium">
-                Cross-Functional Collaboration
+              Scalable Applications
               </span>
             </div>
           </div>
           
-          <div className="gradient-secondary rounded-2xl p-8 shadow-card hover:shadow-glow transition-smooth hover:-translate-y-2 hover:scale-105">
+          <div className="gradient-secondary rounded-2xl p-8 shadow-card hover:shadow-glow transition-smooth hover:-translate-y-2 hover:scale-105 lg:sticky lg:top-24 self-start">
             <h3 className="text-xl font-semibold mb-6">Quick Facts</h3>
             <div className="space-y-4">
               <div className="flex justify-between">

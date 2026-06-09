@@ -85,12 +85,11 @@ const Projects = () => {
             <div 
               key={project.title}
               className="group bg-card rounded-xl overflow-hidden shadow-card hover:shadow-glow transition-smooth hover:-translate-y-2"
+              onMouseEnter={() => setHoveredProject(project.title)}
+              onMouseLeave={() => setHoveredProject(null)}
             >
               <div className="aspect-video bg-gradient-secondary relative overflow-hidden">
-                <ProjectCard3D 
-                  title={project.title}
-                  onHover={(hovered) => setHoveredProject(hovered ? project.title : null)}
-                />
+                <ProjectCard3D isHovered={hoveredProject === project.title} />
               </div>
               
               <div className="p-6">

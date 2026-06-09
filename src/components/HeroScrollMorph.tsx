@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 import { cn } from "@/lib/utils";
 import { useHeroScroll, type ElementRect } from "@/context/HeroScrollContext";
 
@@ -19,7 +19,7 @@ const HeroScrollMorph = () => {
   const [namePos, setNamePos] = useState<MorphPos | null>(null);
   const [titlePos, setTitlePos] = useState<MorphPos | null>(null);
 
-  const measure = () => {
+  const measure = useCallback(() => {
     if (!startRects || !nameTargetRef.current || !titleTargetRef.current) return;
 
     const nameEnd = captureTargetRect(nameTargetRef.current);
@@ -37,13 +37,13 @@ const HeroScrollMorph = () => {
       y: lerp(rectCenterY(startRects.title), rectCenterY(titleEnd), t),
       fontSize: lerp(startRects.title.fontSize, titleEnd.fontSize, t),
     });
-  };
+  }, [progress, startRects]);
 
   useEffect(() => {
     measure();
     window.addEventListener("resize", measure);
     return () => window.removeEventListener("resize", measure);
-  }, [progress, startRects]);
+  }, [measure]);
 
   const showMorph = progress > 0.02 && !isDocked && startRects;
 

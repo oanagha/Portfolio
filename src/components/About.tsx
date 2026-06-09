@@ -5,31 +5,34 @@ const About = () => {
           <h2 className="text-3xl md:text-4xl font-bold mb-4">
             About <span className="gradient-text">Me</span>
           </h2>
-          {/* <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
-            Full Stack Developer Trainee passionate about creating innovative digital solutions
-           </p> */}
+          <p className="text-lg text-muted-foreground max-w-2xl mx-auto">
+            Full Stack Developer passionate about scalable, user-centric software solutions
+          </p>
         </div>
         
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
+        <div className="grid lg:grid-cols-2 gap-12 items-start">
           <div className="space-y-6">
-            <p className="text-lg leading-relaxed">I am currently working as a Full Stack Developer Trainee at GEESESQUADS. Prior to this, I completed a MEARN Stack Development internship at LUMINAR TECHNOLAB, Calicut, where I gained hands-on experience in full-stack web development.</p>
+            <p className="text-lg leading-relaxed">
+              I am a Full Stack Developer passionate about building scalable web applications and meaningful digital experiences. With professional experience in developing customer-facing platforms, SaaS products, administrative dashboards, and data-driven systems, I enjoy transforming complex requirements into intuitive and reliable solutions.
+            </p>
             <p className="text-lg leading-relaxed text-muted-foreground">
-              I hold a Bachelor's degree in Computer Science from Calicut University. I'm deeply 
-              passionate about building responsive, user-friendly websites and continuously exploring 
-              new and emerging technologies. Always eager to learn, adapt, and grow in the ever-evolving tech industry.
+              Currently working as a Junior Software Engineer at Geesesquads, I collaborate with cross-functional teams to develop production-ready applications that prioritize performance, usability, and maintainability. My journey began with a ME(A)RN Stack Development internship at Luminar Technolab, where I built a strong foundation in modern web development.
+            </p>
+            <p className="text-lg leading-relaxed text-muted-foreground">
+              As a Computer Science graduate from the University of Calicut, I am committed to continuous learning, solving real-world problems, and creating technology that delivers value to both businesses and users.
             </p>
             <div className="flex flex-wrap gap-3 pt-4">
-              <span className="px-4 py-2 gradient-secondary rounded-full text-sm font-medium">Design Thinker</span>
+              <span className="px-4 py-2 gradient-secondary rounded-full text-sm font-medium">User-Centric Design</span>
               <span className="px-4 py-2 gradient-secondary rounded-full text-sm font-medium">
-                Continuous Learner
+                REST API Integration
               </span>
               <span className="px-4 py-2 gradient-secondary rounded-full text-sm font-medium">
-                Adaptable
+              Scalable Applications
               </span>
             </div>
           </div>
           
-          <div className="gradient-secondary rounded-2xl p-8 shadow-card hover:shadow-glow transition-smooth hover:-translate-y-2 hover:scale-105">
+          <div className="gradient-secondary rounded-2xl p-8 shadow-card hover:shadow-glow transition-smooth hover:-translate-y-2 hover:scale-105 lg:sticky lg:top-24 self-start">
             <h3 className="text-xl font-semibold mb-6">Quick Facts</h3>
             <div className="space-y-4">
               <div className="flex justify-between">
@@ -38,15 +41,19 @@ const About = () => {
               </div>
               <div className="flex justify-between">
                 <span className="text-muted-foreground">Current Role</span>
-                <span className="font-medium">Trainee at GEESESQUADS</span>
+                <span className="font-medium">Junior Software Engineer</span>
               </div>
               <div className="flex justify-between">
-                <span className="text-muted-foreground">Specialization</span>
-                <span className="font-medium">Full Stack Developer</span>
+                <span className="text-muted-foreground">Company</span>
+                <span className="font-medium">GEESESQUADS</span>
+              </div>
+              <div className="flex justify-between">
+                <span className="text-muted-foreground">Location</span>
+                <span className="font-medium">Calicut, India</span>
               </div>
               <div className="flex justify-between">
                 <span className="text-muted-foreground">University</span>
-                <span className="font-medium">Calicut University</span>
+                <span className="font-medium">University of Calicut</span>
               </div>
             </div>
           </div>

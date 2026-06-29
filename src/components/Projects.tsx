@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { ExternalLink, Github } from "lucide-react";
+import { ExternalLink } from "lucide-react";
 import ProjectCard3D from "./ProjectCard3D";
 import { useState } from "react";
 
@@ -8,6 +8,21 @@ const Projects = () => {
   const [showAllProjects, setShowAllProjects] = useState(false);
   
   const projects = [
+   {
+  title: "StudyMate AI",
+  description: "A full-stack AI-powered learning platform that helps students transform uploaded study materials into AI-generated summaries, quizzes, flashcards, and personalized study plans. Features secure authentication, learning analytics, notifications, and document management for a smarter learning experience.",
+  tech: [
+    "React.js",
+    "TypeScript",
+    "Node.js",
+    "Express.js",
+    "PostgreSQL",
+    "Tailwind CSS",
+    "Gemini AI"  ],
+  image: "/placeholder.svg",
+  liveUrl: "https://study-buddy-ai.oanagha93.workers.dev",
+  githubUrl: "#"
+},
     {
       title: "Skyline Storage",
       description: "Micro frontend self-storage management platform with separate customer-facing and admin frontend modules. Contributed to interfaces where users browse unit sizes, pricing, and availability. Built responsive floor plan and unit listing modules with dynamic backend integration, reusable React components, and admin dashboards for storage units, customer accounts, reservations, and facility operations.",
@@ -110,7 +125,18 @@ const Projects = () => {
                     </span>
                   ))}
                 </div>
-                
+
+                {project.liveUrl && project.liveUrl !== "#" && (
+                  <a
+                    href={project.liveUrl}
+                    target="_blank"
+                    rel="noreferrer"
+                    aria-label={`${project.title} live demo`}
+                    className="inline-flex h-10 w-10 items-center justify-center rounded-full border border-muted/20 bg-muted/5 text-primary transition-colors hover:bg-primary/10"
+                  >
+                    <ExternalLink size={18} />
+                  </a>
+                )}
               </div>
             </div>
           ))}
